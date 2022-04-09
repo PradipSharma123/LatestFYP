@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/cssgallery.css' %}">
+</head>
+<body>
+    <div class="gallery" id="gallery">
+        <div>
+            <h1 style="margin-left: 800px; color:black;">Gallery</h1>
+        </div>
+    
+    
+        <ul class="controls">
+            <li class="buttons active">
+                <a href="{% url 'index' %}" style="text-decoration:none;">All</a>
+            </li>
+            {% for category in categories %}
+            <li class="buttons">
+                <a href="{% url 'index' %}?category={{category.name}}" style="text-decoration:none;">{{category.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    
+        <div class="image-container">
+            {% for photo in photos %}
+            <a href="{{photo.image.url}}" class="image">
+                <img src="{{photo.image.url}}" alt="">
+            </a>
+            {% endfor %}
+    
+        </div>
+    
+    </div>
+</body>
+</html>
