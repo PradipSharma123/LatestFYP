@@ -19,9 +19,9 @@
             <li class="buttons active">
                 <a href="{% url 'index' %}" style="text-decoration:none;">All</a>
             </li>
-            {% for category in categories %}
+            {% for icategory in icategories %}
             <li class="buttons">
-                <a href="{% url 'index' %}?category={{category.name}}" style="text-decoration:none;">{{category.name}}</a>
+                <a href="{% url 'index' %}?category={{icategory.name}}" style="text-decoration:none;">{{icategory.name}}</a>
             </li>
             {% endfor %}
         </ul>
