@@ -18,6 +18,21 @@ def index(request):
 
     context = {'icategories': icategories, 'photos': photos}
 
+    return render(request, 'gallery.html', context)
+
+
+def gallery(request):
+
+    icategory = request.GET.get('category')
+    if icategory == None:
+        photos = Photo.objects.all()
+    else:
+        photos = Photo.objects.filter(icategory__name=icategory)
+
+    icategories = iCategory.objects.all()
+
+    context = {'icategories': icategories, 'photos': photos}
+
     return render(request, 'home.html', context)
 
 

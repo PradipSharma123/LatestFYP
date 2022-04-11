@@ -6,17 +6,19 @@
     <meta charset="utf-8">
     <title>HOTEL Ganesh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="static/css/demo.css">
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
-    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'static/css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+
     <style>
        
     </style>
 </head>
 
 <body>
-    <script src="{% static 'js/script.js' %}"></script>
+    
 
     <!-- header -->
     <header class="header" id="header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))">
@@ -28,13 +30,13 @@
                    
                     
                     <li><a href="#header">Contact</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="index">Gallery</a></li>
                     <li><a href="#services">Service</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="gallery">Home</a></li>
                     
                         <div style="WIDTH:70PX; margin-right: 680px;">
                     
-                            <img src="static/images/logo.jpg" alt="logo-image">
+                            <img src="{% static 'images/logo.jpg' %}" alt="logo-image">
                         </div>
                     
                     
@@ -191,7 +193,7 @@
             <!-- single room -->
             <article class="room">
                 <div class="room-image">
-                    <img src="static/images/img1.jpg" alt="room image">
+                    <img src="{% static 'app/images/img1.jpg' %}" alt="room image">
                 </div>
                 <div class="room-text">
                     <h3>Deluxe Rooms</h3>
@@ -226,7 +228,7 @@
             <!-- single room -->
             <article class="room">
                 <div class="room-image">
-                    <img src="static/images/img2.jpg" alt="room image">
+                    <img src="{% static 'app/images/img2.jpg' %}" alt="room image">
                 </div>
                 <div class="room-text">
                     <h3>AC Rooms</h3>
@@ -261,7 +263,7 @@
             <!-- single room -->
             <article class="room">
                 <div class="room-image">
-                    <img src="static/images/img3.jpg" alt="room image">
+                    <img src="{% static 'app/images/img3.jpg' %}" alt="room image">
                 </div>
                 <div class="room-text">
                     <h3>Non-AC Rooms</h3>
@@ -315,7 +317,7 @@
                     <h3>We Loved it</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
                         eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="static/images/cus1.jpg" alt="customer image">
+                    <img src="{% static 'app/images/cus1.jpg' %}" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->
@@ -331,7 +333,7 @@
                     <h3>Comfortable Living</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
                         eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="static/images/cus2.jpg" alt="customer image">
+                    <img src="{% static 'app/images/cus2.jpg' %}" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->
@@ -347,7 +349,7 @@
                     <h3>Nice Place</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
                         eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="static/images/cus3.jpg" alt="customer image">
+                    <img src="{% static 'app/images/cus3.jpg' %}" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->
@@ -423,7 +425,7 @@
     </footer>
     <!-- end of footer -->
 
-    <script src="{% static 'css/script.js' %}"></script>
+    <script src="{% static 'app/js/script.js' %}"></script>
 </body>
 
 </html>
