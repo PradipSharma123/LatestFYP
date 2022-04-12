@@ -30,9 +30,9 @@
                    
                     
                     <li><a href="#header">Contact</a></li>
-                    <li><a href="index">Gallery</a></li>
+                    <li><a href="{% url 'index' %}">Gallery</a></li>
                     <li><a href="#services">Service</a></li>
-                    <li><a href="gallery">Home</a></li>
+                    <li><a href="{% url 'gallery' %}">Home</a></li>
                     
                         <div style="WIDTH:70PX; margin-right: 680px;">
                     
@@ -61,23 +61,6 @@
         </div>
     </header>
     <!-- end of header -->
-
-    <!-- side navbar -->
-    <div class="sidenav" id="sidenav">
-        <span class="cancel-btn" id="cancel-btn">
-            <i class="fas fa-times"></i>
-        </span>
-
-        <ul class="navbar">
-            <li><a href="#header">home</a></li>
-            <li><a href="#services">services</a></li>
-            <li><a href="#rooms">rooms</a></li>
-            <li><a href="#customers">customers</a></li>
-        </ul>
-        <button class="btn sign-up">sign up</button>
-        <button class="btn log-in">log in</button>
-    </div>
-    <!-- end of side navbar -->
 
     <!-- fullscreen modal -->
     <div id="modal"></div>
@@ -221,7 +204,9 @@
                     <p class="rate">
                         <span>RS 19,999 /</span> Per Night
                     </p>
-                    <button type="button" class="btn">book now</button>
+                   <button type="button" class="btn" ><a href="{% url 'RoomListView' %}">book now</a></button>
+
+
                 </div>
             </article>
             <!-- end of single room -->
@@ -256,7 +241,7 @@
                     <p class="rate">
                         <span>RS 14,999 /</span> Per Night
                     </p>
-                    <button type="button" class="btn">book now</button>
+                    <button type="button" class="btn"><a href="{% url 'RoomListView' %}">book now</a></button>
                 </div>
             </article>
             <!-- end of single room -->
@@ -291,7 +276,7 @@
                     <p class="rate">
                         <span>RS 9,999 /</span> Per Night
                     </p>
-                    <button type="button" class="btn">book now</button>
+                    <button type="button" class="btn"><a href="{% url 'RoomListView' %}">book now</a></button>
                 </div>
             </article>
             <!-- end of single room -->
