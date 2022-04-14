@@ -19,7 +19,7 @@
             <ul>
     
     
-                <li><a href="#header">Contact</a></li>
+                <li><a href="{% url 'aboute' %}">Contact</a></li>
                 <li><a href="{% url 'index' %}">Gallery</a></li>
                 <li><a href="#services">Service</a></li>
                 <li><a href="{% url 'gallery' %}">Home</a></li>
@@ -47,6 +47,7 @@
             <li class="buttons active">
                 <a href="{% url 'index' %}" style="text-decoration:none;">All</a>
             </li>
+            <br>
             {% for icategory in icategories %}
             <li class="buttons">
                 <a href="{% url 'index' %}?category={{icategory.name}}" style="text-decoration:none;">{{icategory.name}}</a>

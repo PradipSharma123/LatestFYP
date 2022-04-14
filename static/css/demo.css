@@ -193,7 +193,8 @@ img {
     color: #fff;
     text-transform: capitalize;
     text-decoration: none;
-    padding: 15px 0;
+    /* padding: 0px 0px; */
+    padding-bottom: 7px;
     display: block;
     border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
     opacity: 0.8;
@@ -202,7 +203,7 @@ img {
 }
 
 .navbar li a:hover {
-    padding-left: 12px;
+    /* padding-left: 12px; */
 }
 
 .sign-up,

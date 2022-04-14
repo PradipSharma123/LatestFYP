@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
-    <link rel="stylesheet" href="{% static 'static/css/nav.css' %}">
+    
     <link rel="stylesheet" href="{% static 'css/demo.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
 
@@ -29,7 +29,7 @@
                 <ul>
                    
                     
-                    <li><a href="#header">Contact</a></li>
+                    <li><a href="{% url 'aboute' %}">Contact</a></li>
                     <li><a href="{% url 'index' %}">Gallery</a></li>
                     <li><a href="#services">Service</a></li>
                     <li><a href="{% url 'gallery' %}">Home</a></li>
@@ -42,15 +42,6 @@
                     
                 </ul>
             </nav>
-        
-        <div class="head-top">
-            <div class="site-name">
-                <span> &nbsp;Harry&nbsp;&nbsp;</span>
-            </div>
-            <div class="site-nav">
-                <span id="nav-btn">MENU <i class="fas fa-bars"></i></span>
-            </div>
-        </div>
 
         <div class="head-bottom flex">
             <h2>Nice and Comfortable Place To Stay</h2>
@@ -176,7 +167,7 @@
             <!-- single room -->
             <article class="room">
                 <div class="room-image">
-                    <img src="{% static 'app/images/img1.jpg' %}" alt="room image">
+                    <img src="{% static 'images/img1.jpg' %}" alt="room image">
                 </div>
                 <div class="room-text">
                     <h3>Deluxe Rooms</h3>
@@ -213,7 +204,7 @@
             <!-- single room -->
             <article class="room">
                 <div class="room-image">
-                    <img src="{% static 'app/images/img2.jpg' %}" alt="room image">
+                    <img src="{% static 'images/img2.jpg' %}" alt="room image">
                 </div>
                 <div class="room-text">
                     <h3>AC Rooms</h3>
@@ -248,7 +239,7 @@
             <!-- single room -->
             <article class="room">
                 <div class="room-image">
-                    <img src="{% static 'app/images/img3.jpg' %}" alt="room image">
+                    <img src="{% static 'images/img3.jpg' %}" alt="room image">
                 </div>
                 <div class="room-text">
                     <h3>Non-AC Rooms</h3>
@@ -302,7 +293,7 @@
                     <h3>We Loved it</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
                         eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="{% static 'app/images/cus1.jpg' %}" alt="customer image">
+                    <img src="{% static 'images/cus1.jpg' %}" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->
@@ -318,7 +309,7 @@
                     <h3>Comfortable Living</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
                         eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="{% static 'app/images/cus2.jpg' %}" alt="customer image">
+                    <img src="{% static 'images/cus2.jpg' %}" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->
@@ -334,7 +325,7 @@
                     <h3>Nice Place</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
                         eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="{% static 'app/images/cus3.jpg' %}" alt="customer image">
+                    <img src="{% static 'images/cus3.jpg' %}" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->

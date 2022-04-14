@@ -36,6 +36,36 @@ def gallery(request):
     return render(request, 'home.html', context)
 
 
+def aboute(request):
+
+    icategory = request.GET.get('category')
+    if icategory == None:
+        photos = Photo.objects.all()
+    else:
+        photos = Photo.objects.filter(icategory__name=icategory)
+
+    icategories = iCategory.objects.all()
+
+    context = {'icategories': icategories, 'photos': photos}
+
+    return render(request, 'about.html', context)
+
+
+def nasalu(request):
+
+    icategory = request.GET.get('category')
+    if icategory == None:
+        photos = Photo.objects.all()
+    else:
+        photos = Photo.objects.filter(icategory__name=icategory)
+
+    icategories = iCategory.objects.all()
+
+    context = {'icategories': icategories, 'photos': photos}
+
+    return render(request, 'nasalu.html', context)
+
+
 def RoomListView(request):
     room = Room.objects.all()[0]
     room_categories = dict(room.Room_categories)
