@@ -51,19 +51,12 @@ def aboute(request):
     return render(request, 'about.html', context)
 
 
-def nasalu(request):
+class KhaltiRequestView(View):
+    def get(self, request, *args, **kwargs):
+        context = {
 
-    icategory = request.GET.get('category')
-    if icategory == None:
-        photos = Photo.objects.all()
-    else:
-        photos = Photo.objects.filter(icategory__name=icategory)
-
-    icategories = iCategory.objects.all()
-
-    context = {'icategories': icategories, 'photos': photos}
-
-    return render(request, 'nasalu.html', context)
+        }
+        return render(request, "Khalti.html", context)
 
 
 def RoomListView(request):
@@ -114,6 +107,7 @@ class RoomDetailView(View):
                 'form': form,
             }
             return render(request, 'room_detail_view.html', context)
+
         else:
             return HttpResponse('Category does not exist')
 

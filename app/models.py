@@ -36,6 +36,13 @@ class Room(models.Model):
         return f'{self.number}. {self.category} of {self.beds} beds with {self.capacity} people'
 
 
+METHOD = (
+    ("Cash On Delevery", "Cash On Delevery"),
+    ("Khalti", "Khalti"),
+
+)
+
+
 class Booking(models.Model):
     # foreignkey ra tesko parenthesis vitra vako sabai ko barema herna xa hai aru sab bujexas taile
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
@@ -43,6 +50,10 @@ class Booking(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     check_in = models.DateTimeField()
     check_out = models.DateTimeField()
+    payment_method = models.CharField(
+        max_length=20, choices=METHOD, null=True, default="Cash On Delevery")
+    payment_completed = models.BooleanField(
+        default=False, null=True, blank=True)
 
     def __str__(self):
         return f'{self.user} booked {self.room} in {self.check_in} to {self.check_out}.'
