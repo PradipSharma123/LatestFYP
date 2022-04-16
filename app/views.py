@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, HttpResponse
 from . models import iCategory, Photo, Room, Booking
 from django.views.generic import ListView, FormView, View, DeleteView
@@ -53,10 +54,25 @@ def aboute(request):
 
 class KhaltiRequestView(View):
     def get(self, request, *args, **kwargs):
+
         context = {
 
         }
         return render(request, "Khalti.html", context)
+
+
+def KhaltiView(request):
+    def get(self, request, *args, **kwargs):
+        context = {
+
+        }
+        return render(request, "Khalti.html", context)
+
+
+class KhaltiVerifyView(View):
+    def get(self, request, *args, **kwargs):
+        data = {}
+        return JsonResponse(data)
 
 
 def RoomListView(request):
@@ -81,7 +97,7 @@ def RoomListView(request):
     return render(request, 'room_list_view.html', context,)
 
 
-class BookingList(ListView):
+class BookingListView(ListView):
     model = Booking
     template_name = "booking_list_view.html"
 
@@ -144,4 +160,5 @@ class RoomDetailView(View):
 
 class CancelBookingView(DeleteView):
     model = Booking
+    template_name = 'booking_cancel_view.html'
     success_url = reverse_lazy('BookingListView')
